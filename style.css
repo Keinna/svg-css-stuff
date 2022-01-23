@@ -174,3 +174,62 @@ svg:hover #dark2 {
 .arrow-up {
   font-size: 1.5rem;
 }
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  margin: 0.5rem auto;
+  width: 320px;
+  position: relative;
+}
+
+.button-text {
+  position: absolute;
+  font-weight: bold;
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: var(--light-color);
+}
+
+.button-outline:hover .shape {
+  -webkit-animation: 1s outline ease forwards;
+  animation: 1s outline ease forwards;
+}
+.button-fill:hover .shape {
+  -webkit-animation: 0.7s fill ease forwards;
+  animation: 0.7s fill ease forwards;
+}
+
+@keyframes outline {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 8px;
+  }
+}
+
+@keyframes fill {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 8px;
+    fill: var(--light-color);
+  }
+}

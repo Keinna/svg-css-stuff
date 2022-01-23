@@ -26,8 +26,9 @@
                         Features
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Triangles</a></li>
-                        <li><a class="dropdown-item" href="#falling-stars">Falling stars</a></li>
+                        <li><a class="dropdown-item" href="#movingTriangles">Moving triangles</a></li>
+                        <li><a class="dropdown-item" href="#fallingStars">Falling stars</a></li>
+                        <li><a class="dropdown-item" href="#buttonAnimation">Button animation</a></li>
                     </ul>
                     </div>
                  
@@ -43,11 +44,11 @@
     <main>
     <section>
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center" id="movingTriangles">
                 <div class="col col-lg-7">
                     <div class="card">
                         <div class="card-img-top">
-                            <svg onclick="changeColor()" id="changeColor"class=triangles width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg onclick="changeColor()" id="changeColor"class=triangles width="200" height="200" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="triangles" clip-path="url(#clip0_1_2)">
                                 <g id="lightGroup">
                                 <path id="light1" opacity="0.7" d="M49 44L4 65.6506V22.3494L49 44Z"/>
@@ -69,15 +70,15 @@
                         </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">	
-                                   <span class="arrow-up"> &#129045;</span> Hover the triangles</li>
+                                   <span class="arrow-up"> &#129045;</span> Hover the triangles.</li>
                                 <li class="list-group-item"> 	
-                                    <span class="arrow-up"> &#129045;</span>Click the triangles</li>
+                                    <span class="arrow-up"> &#129045;</span>Click the triangles.</li>
                               </ul>
                     </div>
                 </div>
                 <div class="col col-lg-7">
                     <div class="card">
-                        <div class="card-img-top" id="falling-stars">
+                        <div class="card-img-top" id="fallingStars">
                             <svg  id="js-toggle-stars" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="stars">
                                 <path id="star1" class="star" d="M35 0L42.858 24.1844L68.287 24.1844L47.7145 39.1312L55.5725 63.3156L35 48.3688L14.4275 63.3156L22.2855 39.1312L1.71302 24.1844L27.142 24.1844L35 0Z"/>
@@ -89,18 +90,53 @@
                                 </svg>
                         </div> 
                         <div class="card-body">
-                          <p class="card-text">The stars are falling in an infinite loop. Some have different keyframes, others just needed a delay. You can pause the stars by <span class="important-text">clicking</span> on them. If you <span class="important-text">click</span> again, you can start them falling.</p>
+                            <p class="card-text" >
+                                When you <span class="important-text">hover</span> over the triangles, one triangle wille move out of the picture.
+                                One triangle will move in the frame.
+                                When you <span class="important-text">click</span> on the triangle, it will change to a random color.
+                            </p>
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">	
-                               <span class="arrow-up"> &#129045;</span> Click the stars to stop them</li>
+                               <span class="arrow-up"> &#129045;</span> Click the stars to stop them.</li>
                             <li class="list-group-item"> 	
                                 <span class="arrow-up"> &#129045;</span>Click the stars to start them again.</li>
                           </ul>
                     </div>
                 </div>
             </div>
+            <div class="row justify-content-center" id="buttonAnimation">
+                <div class="col col-lg-7">
+                    <div class="card">
+                        <div class="card-img-top">
+                            <div class="button-wrapper button-outline">
+                                <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                                  <rect class="shape" height="60" width="320" />
+                                </svg>
+                                 <div class="button-text">HOVER ME!!</div>
+                              </div>
+                            <div class="button-wrapper button-fill">
+                                <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                                  <rect class="shape" height="60" width="320" />
+                                </svg>
+                                 <div class="button-text">HOVER ME!!</div>
+                              </div>
+                        </div> 
+                        <div class="card-body">
+                            <p class="card-text">Here you can see hover animations for a button. You can <span class="important-text">hover</span> over them. One wil give you an outline. The other will show the filled option.</p>
+                        </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">	
+                                   <span class="arrow-up"> &#129045;</span> Hover the top button to see an outline animation.</li>
+                                <li class="list-group-item"> 	
+                                    <span class="arrow-up"> &#129045;</span> Hover the bottom button to see a fill animation.</li>
+                              </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+
+       
     </section>   
 </main>
         <script src="main.js"></script>
