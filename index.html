@@ -21,9 +21,16 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
+                 <div class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        Features
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Triangles</a></li>
+                        <li><a class="dropdown-item" href="#falling-stars">Falling stars</a></li>
+                    </ul>
+                    </div>
+                 
                 </ul>
               </div>
             </div>
@@ -31,14 +38,16 @@
     </nav>
     <header>
         <h1>Animations SVG and CSS</h1>
+        <h2 class="italic">and a little bit of javascript</h2>
     </header>
     <main>
     <section>
         <div class="container">
-            <div class="row justify-content-around">
-                <div class="col-4">
+            <div class="row justify-content-center">
+                <div class="col col-lg-7">
                     <div class="card">
-                        <div class="card-img-top"><svg onclick="changeColor()" id="changeColor"class=triangles width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div class="card-img-top">
+                            <svg onclick="changeColor()" id="changeColor"class=triangles width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="triangles" clip-path="url(#clip0_1_2)">
                                 <g id="lightGroup">
                                 <path id="light1" opacity="0.7" d="M49 44L4 65.6506V22.3494L49 44Z"/>
@@ -49,46 +58,53 @@
                                 </g>
                                 </g>
                                 <defs>
-                                </svg>
+                            </svg>
                         </div> 
-                            <div class="card-body">
-                              <p class="card-text" >
-                                  When you hover over the triangles, one triangle wille move out of the picture.
-                                  One triangle will move in the frame.
-                                  When you click on the triangle, it will change to a random color.
-                              </p>
-                            </div>
+                        <div class="card-body">
+                            <p class="card-text" >
+                                When you <span class="important-text">hover</span> over the triangles, one triangle wille move out of the picture.
+                                One triangle will move in the frame.
+                                When you <span class="important-text">click</span> on the triangle, it will change to a random color.
+                            </p>
+                        </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">	
                                    <span class="arrow-up"> &#129045;</span> Hover the triangles</li>
                                 <li class="list-group-item"> 	
                                     <span class="arrow-up"> &#129045;</span>Click the triangles</li>
                               </ul>
-                          </div>
+                    </div>
                 </div>
-                <div class="col-4">
+                <div class="col col-lg-7">
                     <div class="card">
-                    <div class="card-img-top">
-                        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="stars">
-                            <path id="star1" d="M35 0L42.858 24.1844L68.287 24.1844L47.7145 39.1312L55.5725 63.3156L35 48.3688L14.4275 63.3156L22.2855 39.1312L1.71302 24.1844L27.142 24.1844L35 0Z"/>
-                            <path id="star2" d="M65 70L72.858 94.1844L98.287 94.1844L77.7145 109.131L85.5725 133.316L65 118.369L44.4275 133.316L52.2855 109.131L31.713 94.1844L57.142 94.1844L65 70Z"/>
-                            <path id="star3" d="M127 22L134.858 46.1844L160.287 46.1844L139.714 61.1312L147.572 85.3156L127 70.3688L106.428 85.3156L114.286 61.1312L93.713 46.1844L119.142 46.1844L127 22Z"/>
-                            <path id="star4" d="M152 100L159.858 124.184L185.287 124.184L164.714 139.131L172.572 163.316L152 148.369L131.428 163.316L139.286 139.131L118.713 124.184L144.142 124.184L152 100Z"/>
-                            <path id="star5" d="M165 0L172.858 24.1844L198.287 24.1844L177.714 39.1312L185.572 63.3156L165 48.3688L144.428 63.3156L152.286 39.1312L131.713 24.1844L157.142 24.1844L165 0Z"/>
-                            </g>
-                            </svg>
-                    </div> 
+                        <div class="card-img-top" id="falling-stars">
+                            <svg  id="js-toggle-stars" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="stars">
+                                <path id="star1" class="star" d="M35 0L42.858 24.1844L68.287 24.1844L47.7145 39.1312L55.5725 63.3156L35 48.3688L14.4275 63.3156L22.2855 39.1312L1.71302 24.1844L27.142 24.1844L35 0Z"/>
+                                <path id="star2" class="star"  d="M65 70L72.858 94.1844L98.287 94.1844L77.7145 109.131L85.5725 133.316L65 118.369L44.4275 133.316L52.2855 109.131L31.713 94.1844L57.142 94.1844L65 70Z"/>
+                                <path id="star3" class="star"  d="M127 22L134.858 46.1844L160.287 46.1844L139.714 61.1312L147.572 85.3156L127 70.3688L106.428 85.3156L114.286 61.1312L93.713 46.1844L119.142 46.1844L127 22Z"/>
+                                <path id="star4" class="star"  d="M152 100L159.858 124.184L185.287 124.184L164.714 139.131L172.572 163.316L152 148.369L131.428 163.316L139.286 139.131L118.713 124.184L144.142 124.184L152 100Z"/>
+                                <path id="star5" class="star"  d="M165 0L172.858 24.1844L198.287 24.1844L177.714 39.1312L185.572 63.3156L165 48.3688L144.428 63.3156L152.286 39.1312L131.713 24.1844L157.142 24.1844L165 0Z"/>
+                                </g>
+                                </svg>
+                        </div> 
                         <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p class="card-text">The stars are falling in an infinite loop. Some have different keyframes, others just needed a delay. You can pause the stars by <span class="important-text">clicking</span> on them. If you <span class="important-text">click</span> again, you can start them falling.</p>
                         </div>
-                      </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">	
+                               <span class="arrow-up"> &#129045;</span> Click the stars to stop them</li>
+                            <li class="list-group-item"> 	
+                                <span class="arrow-up"> &#129045;</span>Click the stars to start them again.</li>
+                          </ul>
+                    </div>
                 </div>
-              </div>
+            </div>
         </div>
     </section>   
 </main>
         <script src="main.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
 </body>
 </html>
