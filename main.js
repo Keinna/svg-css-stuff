@@ -1,9 +1,7 @@
-const svg = document.getElementById('triangles');
-
-svg.onclick = (e) => {
+function changeColor() {
     const colors = [ 'pink', 'orange' , 'red', 'purple', 'blue', 'teal']
     const rando = () => colors[Math.floor (Math.random() * colors.length)];
-    document.documentElement.style.cssText = `
+    document.getElementById("changeColor").style.cssText = `
     --dark-color: ${rando()};
     --light-color: ${rando()};`
-}
+  }
