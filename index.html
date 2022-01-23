@@ -3,25 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Svg css stuff </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <title>Svg css stuff </title>
+    
 </head>
 <body>
-    <svg width="120" height="100" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g id="triangles" clip-path="url(#clip0_1_2)">
-        <g id="lightGroup">
-        <path id="light1" opacity="0.7" d="M49 44L4 65.6506V22.3494L49 44Z"/>
-        </g>
-        <g id="darkGroup">
-        <path id="dark1" opacity="0.7" d="M66 44L21 65.6506V22.3494L66 44Z"/>
-        <path id="dark2" opacity="0.7" d="M49 44L4 65.6506V22.3494L49 44Z"/>
-        </g>
-        </g>
-        <defs>
-        </svg>
-        
-    
+    <nav>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">SVG Animations</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </nav>
+    <header>
+        <h1>Animations SVG and CSS</h1>
+    </header>
+    <main>
+    <section>
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-img-top"><svg class=triangles width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="triangles" clip-path="url(#clip0_1_2)">
+                                <g id="lightGroup">
+                                <path id="light1" opacity="0.7" d="M49 44L4 65.6506V22.3494L49 44Z"/>
+                                </g>
+                                <g id="darkGroup">
+                                <path id="dark1" opacity="0.7" d="M66 44L21 65.6506V22.3494L66 44Z"/>
+                                <path id="dark2" opacity="0.7" d="M49 44L4 65.6506V22.3494L49 44Z"/>
+                                </g>
+                                </g>
+                                <defs>
+                                </svg>
+                        </div> 
+                            <div class="card-body">
+                              <p class="card-text">
+                                  When you hover over the triangles, one triangle wille move out of the picture.
+                                  One triangle will move in the frame.
+                                  When you click on the triangle, it will change to a random color.
+                              </p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">	
+                                   <span class="arrow-up"> &#129045;</span> Hover the triangles</li>
+                                <li class="list-group-item"> 	
+                                    <span class="arrow-up"> &#129045;</span>Click the triangles</li>
+                              </ul>
+                          </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                    <div class="card-img-top">
+                        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="stars">
+                            <path id="star1" d="M35 0L42.858 24.1844L68.287 24.1844L47.7145 39.1312L55.5725 63.3156L35 48.3688L14.4275 63.3156L22.2855 39.1312L1.71302 24.1844L27.142 24.1844L35 0Z"/>
+                            <path id="star2" d="M65 70L72.858 94.1844L98.287 94.1844L77.7145 109.131L85.5725 133.316L65 118.369L44.4275 133.316L52.2855 109.131L31.713 94.1844L57.142 94.1844L65 70Z"/>
+                            <path id="star3" d="M127 22L134.858 46.1844L160.287 46.1844L139.714 61.1312L147.572 85.3156L127 70.3688L106.428 85.3156L114.286 61.1312L93.713 46.1844L119.142 46.1844L127 22Z"/>
+                            <path id="star4" d="M152 100L159.858 124.184L185.287 124.184L164.714 139.131L172.572 163.316L152 148.369L131.428 163.316L139.286 139.131L118.713 124.184L144.142 124.184L152 100Z"/>
+                            <path id="star5" d="M165 0L172.858 24.1844L198.287 24.1844L177.714 39.1312L185.572 63.3156L165 48.3688L144.428 63.3156L152.286 39.1312L131.713 24.1844L157.142 24.1844L165 0Z"/>
+                            </g>
+                            </svg>
+                    </div> 
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                </div>
+              </div>
+        </div>
+    </section>   
+</main>
         <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
