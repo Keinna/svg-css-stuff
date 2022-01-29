@@ -249,3 +249,11 @@ svg:hover #dark2 {
 .drumkit:hover {
   /* cursor: pointer; */
 }
+
+.key-code {
+  transition: all 0.3s;
+}
+
+.playing {
+  transform: translateY(3px);
+}

@@ -20,13 +20,27 @@ function changeColor() {
 
 // key triggers drums
 
-window.addEventListener('keydown', (e) =>{
+function playDrums (e){
     const audio = document.querySelector(`audio[data-key=${e.key}]`)
+    // used this on first with the matching data-code lijk KeyD.
+    // const play = document.querySelector(`[data-code=${e.code}]`)
+    // found out that you can use the same data selector again
+    const play = document.querySelector(`[data-key=${e.key}]`)
     if(!audio) return;
-    audio.currentTime = 0; //rewind to start
-    
+    audio.currentTime = 0; //rewind to start  
     audio.play();
-})
+    play.classList.add('playing')
+};
+
+function removeTransition(e){
+if(e.propertyName !== 'transform') return //skip this if there is no transform
+this.classList.remove('playing')
+}
 
 
+const keys = document.querySelectorAll('.key-code')
+keys.forEach(key => key.addEventListener('transitionend', removeTransition))
+
+
+window.addEventListener('keydown', playDrums )
 
