@@ -22,7 +22,7 @@ function changeColor() {
 
 function playDrums (e){
     const audio = document.querySelector(`audio[data-key=${e.key}]`)
-    // used this on first with the matching data-code lijk KeyD.
+    // used this on first with the matching data-code like KeyD.
     // const play = document.querySelector(`[data-code=${e.code}]`)
     // found out that you can use the same data selector again
     const play = document.querySelector(`[data-key=${e.key}]`)
@@ -43,4 +43,50 @@ keys.forEach(key => key.addEventListener('transitionend', removeTransition))
 
 
 window.addEventListener('keydown', playDrums )
+
+
+
+// const snare = document.querySelector('#snare')
+snare.addEventListener('click', (e) =>{
+  snareSound.currentTime = 0;
+  snareSound.play()
+  snare.classList.add('playing')
+  console.log(e)
+})
+floor.addEventListener('click', (e) =>{
+  floorSound.currentTime = 0;
+  floorSound.play()
+  floor.classList.add('playing')
+  console.log(e)
+})
+hihat.addEventListener('click', (e) =>{
+  hihatSound.currentTime = 0;
+  hihatSound.play()
+  hihat.classList.add('playing')
+  console.log(e)
+})
+bass.addEventListener('click', (e) =>{
+  bassSound.currentTime = 0;
+  bassSound.play()
+  bass.classList.add('playing')
+  console.log(e)
+})
+hihatOpen.addEventListener('click', (e) =>{
+  hihatOpenSound.currentTime = 0;
+  hihatOpenSound.play()
+  hihatOpen.classList.add('playing')
+  console.log(e)
+})
+tom.addEventListener('click', (e) =>{
+  tomSound.currentTime = 0;
+  tomSound.play()
+  tom.classList.add('playing')
+  console.log(e)
+})
+tomRight.addEventListener('click', (e) =>{
+  tomRightSound.currentTime = 0;
+  tomRightSound.play()
+  tomRight.classList.add('playing')
+  console.log(e)
+})
 
