@@ -1,26 +1,251 @@
-html,
-body {
-  overflow: hidden;
+:root {
+  --dark-color: #fc3232;
+  --light-color: #ffd600;
+  --color-bg: #adb5bd;
+  --color-secondary: #8c99a7;
 }
 
 body {
-  background: #ec4a5e;
+  background-color: var(--color-bg);
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  padding: 4rem 0 0 0;
+}
+
+.important-text {
+  font-weight: bold;
+  color: var(--light-color);
+}
+
+.italic {
+  font-style: italic;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 10rem;
 }
 
 svg {
-  height: 100vh;
-  width: 100vw;
-  display: block;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
 
-i {
+#darkGroup {
+  fill: var(--dark-color);
+}
+#lightGroup {
+  fill: var(--light-color);
+}
+
+#dark1,
+#light1,
+#dark2 {
+  transition: all 1s ease;
+}
+
+#dark2 {
+  transform: translateX(-100%);
+}
+
+.triangles {
+  padding-left: 3rem;
+  padding-top: 3rem;
+}
+
+svg:hover #light1 {
+  transform: translateX(20%);
+}
+svg:hover #dark1 {
+  transform: translateX(40%);
+  opacity: 0;
+}
+svg:hover #dark2 {
+  transform: translateX(0%);
+}
+
+#stars {
+  fill: var(--light-color);
+  transition: all;
+}
+
+#star1 {
+  animation: moveDownStar1 3s infinite;
+}
+#star2 {
+  animation: moveDownStar2 3s infinite;
+}
+#star3 {
+  animation: moveDownStar2 3s infinite;
+}
+#star4 {
+  animation: moveDownStar4 3s infinite;
+  animation-delay: 0.2s;
+}
+#star5 {
+  animation: moveDownStar1 3s infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes moveDownStar1 {
+  from {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+}
+@keyframes moveDownStar2 {
+  from {
+    opacity: 1;
+    transform: translateY(-70px);
+  }
+  to {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+}
+@keyframes moveDownStar4 {
+  from {
+    opacity: 1;
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+}
+
+.navbar {
+  background-color: #8c99a7;
+}
+.navbar-brand {
+  color: white;
+  text-transform: uppercase;
+}
+
+.navbar-brand:hover {
+  color: var(--light-color);
+}
+
+.nav-link {
+  color: white;
+  text-transform: uppercase;
+}
+
+.nav-link:hover,
+.nav-link:active,
+.nav-link:focus {
+  color: var(--light-color);
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: white;
+  background-color: var(--light-color);
+}
+
+.dropdown-menu {
+  background-color: var(--color-secondary);
+}
+
+.dropdown-menu[data-bs-popper] {
+  left: -43px;
+}
+.card {
+  min-width: 35rem;
+  background-color: var(--color-secondary);
+  margin-top: 4rem;
+}
+
+.card-img-top {
+  text-align: center;
+}
+
+.list-group-item {
+  background-color: var(--color-secondary);
   color: white;
 }
-i:hover {
-  color: gray-light;
+
+.arrow-up {
+  font-size: 1.5rem;
 }
 
-#Drums:hover {
-  cursor: pointer;
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  margin: 0.5rem auto;
+  width: 320px;
+  position: relative;
+}
+
+.button-text {
+  position: absolute;
+  font-weight: bold;
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: var(--light-color);
+}
+
+.button-outline:hover .shape {
+  -webkit-animation: 1s outline ease forwards;
+  animation: 1s outline ease forwards;
+}
+.button-fill:hover .shape {
+  -webkit-animation: 0.7s fill ease forwards;
+  animation: 0.7s fill ease forwards;
+}
+
+@keyframes outline {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 8px;
+  }
+}
+
+@keyframes fill {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 8px;
+    fill: var(--light-color);
+  }
+}
+
+.section-drumkit {
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drumkit {
+  width: 600px;
+  height: auto;
+}
+
+.drumkit:hover {
+  /* cursor: pointer; */
 }
