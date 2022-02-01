@@ -90,3 +90,56 @@ tomRight.addEventListener('click', (e) =>{
   console.log(e)
 })
 
+//anime
+var btn = document.getElementById("morph")
+var btnback = document.getElementById("morphback")
+
+btn.addEventListener("click", function(){
+  anime({
+    targets: '.polymorph',
+    points: [
+      { value: [
+        '215,110 0,110 0,0 47.7,0 67,76,0']
+      },
+      { value: [
+        '215,110 0,110 0,0 0,0 67,76,0']
+      },
+    ],
+    easing: 'easeOutQuad',
+    duration: 1200,
+    loop: false
+  });
+  anime({
+    targets: '#blip',
+    opacity: 1,
+    duration: 500,
+
+  })
+
+})
+  
+
+
+
+  // btnback.onclick = function(){
+  //   anime({
+  //     targets: '.polymorph',
+  //       points: [
+  //         { value: [
+  //           '215,110 0,110 0,0 47.7,0 67,76,0']
+  //         },
+  //         { value: [
+  //           '215,110 0,110 0,0 47.7,0 215,0']
+  //         },
+  //       ],
+  //       easing:'easeOutQUad',
+  //       duration:1200,
+  //       loop: false
+  //   });
+  //   anime({
+  //     targets: '#blip',
+  //     opacity: 0,
+  //     duration: 500,
+  
+  //   })
+  // }

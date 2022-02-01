@@ -257,3 +257,46 @@ svg:hover #dark2 {
 .playing {
   transform: translateY(3px);
 }
+
+.section-morph {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.polymorph {
+  fill: #050041;
+}
+
+#morph,
+#morphback {
+  position: absolute;
+  margin: 10em auto 0 auto;
+  left: 0;
+  right: 0;
+  width: 30%;
+  background: none;
+  border: 1px solid var(--color-bg);
+  border-radius: 5px;
+  padding: 15px;
+  color: var(--color-bg);
+  font-size: 1.5em;
+  cursor: pointer;
+  outline: 0;
+}
+
+#morphback {
+  width: auto;
+  margin: 30px auto;
+  background: #050041;
+  color: white;
+}
+
+#blip {
+  color: #050041;
+  position: absolute;
+  opacity: 0;
+  top: 10%;
+  right: 10%;
+  text-align: center;
+}
