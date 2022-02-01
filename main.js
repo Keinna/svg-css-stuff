@@ -99,10 +99,10 @@ btn.addEventListener("click", function(){
     targets: '.polymorph',
     points: [
       { value: [
-        '215,110 0,110 0,0 47.7,0 67,76,0']
+        '215,110 0,110 0,0 47.7,0 67,76']
       },
       { value: [
-        '215,110 0,110 0,0 0,0 67,76,0']
+        '215,110 0,110 0,0 0,0 67,76']
       },
     ],
     easing: 'easeOutQuad',
